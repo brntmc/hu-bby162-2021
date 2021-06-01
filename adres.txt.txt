@@ -1,0 +1,22 @@
+Berna Atmaca 
+brntmc@gmail.com
+#Google Drive Baðlantýsý
+from google.colab import drive
+
+ 
+dosya = "
+adSoyad = input("Ad soyad giriniz: ")
+eposta = input("Email  giriniz: ")
+
+f = open(dosya, 'a') # Mevcut veriye ek veri yazýlmasý için parametre: 'a'
+f.write(adSoyad + " / " + email + "\n")
+f.close()
+
+dosya = "/content/drive/MyDrive/Colab Notebooks/adres.ipynb"
+
+f = open(dosya,"r")
+
+for line in f. readlines():
+    print(line)
+
+f.close()    
