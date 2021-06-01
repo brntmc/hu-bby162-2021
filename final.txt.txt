@@ -1,0 +1,31 @@
+#Kütüphane otomasyonu
+
+def eserKaydet():
+  ad = input(" Eser adýný girin: ")
+  yazar = input(" Yazar adýný girin: ")
+  yayýn = input(" Yayýnevini girin: ")
+  basým = input(" Basým tarihini girin: ")
+  Isbn = input( "ISBN numarasýný girin: ")
+
+  dosya = "/content/drive/MyDrive/Colab Notebooks/final.ipynb"
+  f = open(dosya, 'a')
+  f.write(ad+ "," +yazar+ "." +yayýn+ "," +basým+ "," +ISBN+ "\n")
+  f.close()
+
+
+def menu():
+  print(" * Kütüphane otomasyonu * ")
+  print(" Not: Giriþlerinizi küçük harfle yapýn.")
+  while True:
+    print("a- Eseri görüntüleyin")
+    print("b- Eseri kaydedin")
+    print("c- Çýkýþ yap.")
+    islem = input("Yapmak istediðiniz iþlemi seçin (a/c): ")
+    if islem == "a":
+      eserListesi()
+    elif islem == "b":
+      eserKaydet()
+    elif islem == "c":
+      print("çýkýþ yapýn")
+      break
+menu() 
